@@ -1,0 +1,425 @@
+/* ----------------------------------------------------------- */
+/*  MEDIA QUERIES SETTINGS
+/* ----------------------------------------------------------- */
+$desktop-width: 1199px;
+$laptop-width: 991px;
+$ipad-width: 768px;
+$note-width: 480px;
+$galaxy-width: 360px;
+$iphone-width: 320px;
+
+@mixin desktop {
+	@media (max-width: #{$desktop-width}) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media (max-width: #{$laptop-width}) {
+		@content;
+	}
+}
+@mixin ipad {
+	@media (max-width: #{$ipad-width}) {
+		@content;
+	}
+}
+@mixin note {
+	@media (max-width: #{$note-width}) {
+		@content;
+	}
+}
+@mixin galaxy {
+	@media (max-width: #{$galaxy-width}) {
+		@content;
+	}
+}
+@mixin iphone {
+	@media (max-width: #{$iphone-width}) {
+		@content;
+	}
+}
+
+/* END */
+
+/* GLOBAL */
+body {
+	padding: 10px;
+	font-family: 'Raleway', sans-serif;
+	color: black !important;
+}
+p {
+	font-weight: 400;
+	font-size: 15px;
+}
+@font-face {
+    font-family: nexabold;
+    src: url(fonts/nexa-bold.oft);
+}
+section {
+	@include ipad {
+		padding: 50px 0;
+	}
+}
+// .col-md-6, .col-md-12, .col-xs-12 {
+// 	@include ipad {
+// 		padding-bottom: 30px;
+// 	}
+// }
+/* END GLOBAL */
+
+nav {
+	margin-top: 10px;
+}
+
+.navbar-default.affix {
+	margin-top: 0px;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+	color: white;
+	font-weight: bold;
+	@include ipad {
+		color: #D8127B;
+	}
+}
+
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+	color: white;
+	font-weight: bold;
+}
+.navbar-default .nav > li.active > a, .navbar-default .nav > li.active > a:focus {
+	color: #D8127B !important;
+}
+.navbar-default.affix .nav > li > a, .navbar-default.affix .nav > li > a:focus {
+	color: black;
+	&:hover {
+		color: black;
+	}
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+	color: #D8127B;
+	font-weight: bold;
+	&:hover {
+		color: #D8127B;
+	}
+}
+
+.header-content-inner {
+	h1 {
+		font-weight: bold;
+		font-family: raleway;
+		font-size: 80px !important;
+		margin-left: -4px;
+	}
+	h2 {
+		margin-top: -30px;
+		font-family: raleway;
+	}
+}
+
+header {
+	background: #D8127B;
+	border-bottom: 10px solid white;
+}
+
+.we-are-trisquare {
+	h1 {
+		font-size: 55px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		font-family: raleway;
+		margin-bottom: 0px;
+	}
+	h3 {
+		color: #D8127B;
+		font-weight: bold;
+		font-family: raleway;
+		margin-top: 1px;
+		font-size: 55px;
+	}
+	@include ipad {
+		display: none;
+	}
+}
+
+.about-below {
+	margin-top: 50px;
+	p {
+		font-family: raleway;
+	}
+	h1,h2,h3 {
+		font-family: raleway;
+	}
+	.about-left {
+		text-align: right;
+		@include ipad {
+			text-align: center;
+		}
+	}
+	.about-right {
+		text-align: left;
+		h3 {
+			font-weight: bold;
+		}
+	}
+	h2 {
+		margin-bottom: 0px;
+		margin-top: 0px;
+		@include ipad {
+			font-size: 40px;
+		}
+	}
+	.about-bottom-p {
+		font-size: 40px;
+		line-height: 43px;
+		color: #D8127B;
+		@include ipad {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}
+
+#outeriframe {
+	width:446px;
+	height:246px;
+	overflow:hidden;
+	position:relative;
+}
+
+#inneriframe {
+	position:absolute;
+	top:-412px;
+	left:-318px;
+	width:1280px;
+	height:1200px;
+}
+
+.full-row {
+	background: #D8127B;
+	margin-left: -10px;
+	margin-right: -10px;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	h2 {
+		font-family: raleway;
+		font-weight: bold;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+.btn-ts {
+	color: black;
+	font-weight: bold;
+	font-family: raleway;
+	padding: 0px;
+	&:hover {
+		color: #D8127B;
+	}
+}
+
+.bio-name {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	font-size: 17px;
+}
+.bio-title {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+.bio {
+	text-align: center;
+}
+
+.contact {
+	border: 10px solid #D8127B;
+	margin-bottom: 50px;
+	background-image: url(../img/bg2.png);
+}
+
+.animateBounce {
+	&:hover {
+		-webkit-animation: bounce 1s infinite;
+    	animation: bounce 1s infinite;
+	}
+}
+
+.animatePulse {
+	&:hover {
+		-webkit-animation: pulse 1s infinite;
+    	animation: pulse 1s infinite;
+	}
+}
+
+.animateBand {
+	&:hover {
+		-webkit-animation: rubberBand 1s infinite;
+    	animation: rubberBand 1s infinite;
+	}
+}
+
+.animateShake {
+	&:hover {
+		-webkit-animation: shake 1s infinite;
+    	animation: shake 1s infinite;
+	}
+}
+
+.modal-backdrop {
+   background-color: white;
+}
+
+.modal-content {
+	border: 10px solid #D8127B;
+	border-radius: 0px;
+	@include galaxy {
+		height: 100vh;
+		overflow: auto;
+	}
+}
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	background-color: transparent !important;
+}
+
+.contact-textarea {
+	resize: none;
+	height: 200px !important;
+}
+
+.form-column {
+	@include laptop {
+		padding-bottom: 15px;
+	}
+}
+
+.form-send {
+	font-size: 25px;
+	color: white;
+	&:hover {
+		color: black;
+	}
+}
+
+.ts-form {
+	input, textarea {
+		border: dashed 3px white;
+		border-radius: 0px;
+		background: transparent;
+		font-family: raleway;
+		height: 45px;
+		color: white;
+		&:focus {
+			border-color: black;
+			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075);
+			outline: 0 none;
+		}
+		@include ipad {
+			height: inherit;
+		}
+	}
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+	}
+}
+
+.form-h2 {
+	font-family: raleway;
+	font-weight: bold;
+}
+
+.contact-form-wrap {
+	margin-top: 30px;
+	padding: 50px;
+	background: #D8127B;
+	@include ipad {
+		padding: 25px;
+	}
+}
+
+.triangle-shape {
+	.fa {
+		position: absolute;
+		top: 0;
+		font-size: 100px;
+		left: -30px;
+		color: #D8127B;
+	}
+	@include ipad {
+		display: none;
+	}
+}
+
+.time-line {
+	padding-bottom: 35px;
+	li {
+		height: 100px;
+		font-family: raleway;
+		.timeline-right {
+			font-size: 15px;
+			text-align: left;
+			width: 45%;
+			h3 {
+				margin-top: 0px;
+				font-weight: bold;
+			}
+		}
+		.timeline-left {
+			font-size: 15px;
+			text-align: right;
+			width: 45%;
+			h3 {
+				margin-top: 0px;
+				font-weight: bold;
+			}
+		}
+		.timeline-mid {
+			
+		}
+	}
+	&:before {
+		left: 50%;
+		top: 0;
+		// bottom: 0;
+		height: 450px;
+		position: absolute;
+		content: "";
+		width: 2px;
+		background-color: black;
+	}
+}
+
+.the-way-we-do {
+	font-family: raleway;
+	.the-way-we-do-left {
+		h3 {
+			font-family: raleway;
+			font-weight: bold;
+		}
+	}
+	p {
+		font-family: raleway;
+	}
+}
+
+
