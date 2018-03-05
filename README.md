@@ -1,4 +1,4 @@
-# [Trisquare Labs](http://trisquarelabs.com/)
+# [Girlscode]
 
 ## Bugs and Issues
 
